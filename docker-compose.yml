@@ -4,11 +4,12 @@ services:
   web:
     build:
       context: .
+      dockerfile: Dockerfile_new
       # args:
       #   - SRC_FORMAT=obfuscated
     command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/usr/src/app
+    # volumes:
+      # - .:/usr/src/app
     ports:
       - 8000:8000
     env_file:
