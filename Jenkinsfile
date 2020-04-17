@@ -1,11 +1,15 @@
 pipeline {
   agent {
-        docker { image 'python:3.6' }
+    docker {
+      image 'python:3.6'
     }
+
+  }
   stages {
     stage('Build') {
       steps {
-        sh 'virtualenv'
+        sh '''python --version
+python3 --version'''
       }
     }
 
