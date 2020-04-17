@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''ls
-python3 --version'''
+python --version'''
       }
     }
 
