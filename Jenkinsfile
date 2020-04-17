@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''ls
-/usr/bin/python3 --version'''
+        sh 'echo "$PYTHONHOME"'
       }
     }
 
