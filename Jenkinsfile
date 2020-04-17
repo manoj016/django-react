@@ -1,12 +1,9 @@
 pipeline {
-  agent any
+  agent {
+        docker { image 'python:3.6' }
+    }
   stages {
     stage('Build') {
-      agent {
-        docker {
-          image '3.6'
-        }
-      }
       steps {
         sh 'virtualenv'
       }
